@@ -1,9 +1,5 @@
-var changes = false;        
-    window.onbeforeunload = function() {
-        if (changes)
-        {
-            var message = "Are you sure you want to navigate away from this page?\n\nYou have started writing or editing a post.\n\nPress OK to continue or Cancel to stay on the current page.";
-            if (confirm(message)) return true;
-            else return false;
-        }
-    }
+window.onbeforeunload = function() {
+   return "Do you really want to leave our brilliant application?";
+   //if we return nothing here (just calling return;) then there will be no pop-up question at all
+   //return;
+};
