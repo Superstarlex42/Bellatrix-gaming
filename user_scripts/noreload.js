@@ -1,3 +1,5 @@
-window.addEventListener("unload", function () {
-  parent.console.log("reload?")
-});
+window.onbeforeunload = function(e) {
+  var dialogText = 'We are saving the status of your listing. Are you realy sure you want to leave?';
+  e.returnValue = dialogText;
+  return dialogText;
+};
