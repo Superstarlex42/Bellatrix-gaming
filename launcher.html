@@ -48,22 +48,6 @@
             <script src="IodineGBA/core/cartridge/FLASH.js"></script>
             <script src="IodineGBA/core/cartridge/EEPROM.js"></script>
             <!--Add your webpage scripts below-->
-            <script>
-                window.onbeforeunload = function(e) {
-                    var dialogText = 'We are saving the status of your listing. Are you realy sure you want to leave?';
-                    e.returnValue = dialogText;
-                    return dialogText;
-                };
-                var changes = false;        
-                    window.onbeforeunload = function() {
-                        if (changes)
-                    {
-                var message = "Are you sure you want to navigate away from this page?\n\nYou have started writing or editing a post.\n\nPress OK to continue or Cancel to stay on the current page.";
-                if (confirm(message)) return true;
-                else return false;
-                }
-            }
-            </script>
             <script src="user_scripts/XAudioJS/swfobject.js"></script>
             <script src="user_scripts/XAudioJS/resampler.js"></script>
             <script src="user_scripts/XAudioJS/XAudioServer.js"></script>
@@ -74,6 +58,7 @@
             <script src="user_scripts/IodineGBAAudioGlueCode.js"></script>
             <script src="user_scripts/IodineGBACoreGlueCode.js"></script>
             <script src="user_scripts/base64.js"></script>
+            <script src="user_scripts/antireload.js"></script>
             <link rel="stylesheet" href="user_css/main.css">
     </head>
     <body>
