@@ -1,7 +1,14 @@
-window.addEventListener("beforeunload", function (e) {
-    var confirmationMessage = 'It looks like you have been editing something. '
-                            + 'If you leave before saving, your changes will be lost.';
+const beforeUnloadListener = (event) => {
+  event.preventDefault();
+  return event.returnValue = "Are you sure you want to exit?";
+};
 
-    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+const nameInput = document.querySelector("#name");
+
+nameInput.addEventListener("input", (event) => {
+  if (event.target.value !== "") {
+    addEventListener("beforeunload", beforeUnloadListener, {capture: true});
+  } else {
+    removeEventListener("beforeunload", beforeUnloadListener, {capture: true});
+  }
 });
