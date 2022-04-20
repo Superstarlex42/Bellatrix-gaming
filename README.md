@@ -2,6 +2,6 @@
 
 GBA Emulator is a free, online GBA emulator! I have 50+ Games to play!
 
-# GBA Emulator Website
+# GBA Emulator Website v1.2
 
 https://superstarlex.github.io/Bellatrixgaming/
