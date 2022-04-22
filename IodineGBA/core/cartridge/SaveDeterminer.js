@@ -40,9 +40,6 @@ GameBoyAdvanceSaveDeterminer.prototype.load = function (save) {
 }
 GameBoyAdvanceSaveDeterminer.prototype.checkDetermination = function () {
     switch (this.possible) {
-        case 0x0:
-            this.saveCore.referenceSave(0x0);
-            break;
         case 0x1:
             this.saveCore.referenceSave(0x1);
             break;
@@ -51,9 +48,6 @@ GameBoyAdvanceSaveDeterminer.prototype.checkDetermination = function () {
             break;
         case 0x3:
             this.saveCore.referenceSave(0x3);
-            break;
-        case 0x4:
-            this.saveCore.referenceSave(0x4);
             break;
     }
 }
