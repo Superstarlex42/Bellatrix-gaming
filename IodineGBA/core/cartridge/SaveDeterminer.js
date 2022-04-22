@@ -36,17 +36,21 @@ GameBoyAdvanceSaveDeterminer.prototype.load = function (save) {
         case 0x20000:
             this.possible = this.flags.FLASH | 0;
     }
-    this.checkDetermination();
+    this.checkDetermination();		
 }
 GameBoyAdvanceSaveDeterminer.prototype.checkDetermination = function () {
     switch (this.possible) {
         case 0x0:
-            this.saveCore.referenceSace(0x0);
+            this.saveCore.referenceSave(0x0);
+            break;
         case 0x1:
             this.saveCore.referenceSave(0x1);
             break;
         case 0x2:
             this.saveCore.referenceSave(0x2);
+            break;
+        case 0x3:
+            this.saveCore.referenceSave(0x3);
             break;
         case 0x4:
             this.saveCore.referenceSave(0x4);
