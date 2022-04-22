@@ -11,9 +11,9 @@
 var keyZones = [
     //Use this to control the key mapping:
                 //A:
-                [67],
-                //B:
                 [88],
+                //B:
+                [90],
                 //Select:
                 [16],
                 //Start:
@@ -27,7 +27,7 @@ var keyZones = [
                 //Down:
                 [40],
                 //R:
-                [90],
+                [83],
                 //L:
                 [65]
 ];
