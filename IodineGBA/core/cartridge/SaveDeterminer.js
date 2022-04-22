@@ -49,7 +49,7 @@ GameBoyAdvanceSaveDeterminer.prototype.checkDetermination = function () {
             this.saveCore.referenceSave(0x2);
             break;
         case 0x4:
-            this.saveCore.referenceSave(0x3);
+            this.saveCore.referenceSave(0x4);
     }
 }
 GameBoyAdvanceSaveDeterminer.prototype.readSRAM = function (address) {
