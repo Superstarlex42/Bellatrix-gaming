@@ -36,7 +36,7 @@ GameBoyAdvanceSaveDeterminer.prototype.load = function (save) {
         case 0x20000:
             this.possible = this.flags.FLASH | 0;
     }
-    this.checkDetermination();		
+    this.checkDetermination();
 }
 GameBoyAdvanceSaveDeterminer.prototype.checkDetermination = function () {
     switch (this.possible) {
@@ -54,6 +54,7 @@ GameBoyAdvanceSaveDeterminer.prototype.checkDetermination = function () {
             break;
         case 0x4:
             this.saveCore.referenceSave(0x4);
+            break;
     }
 }
 GameBoyAdvanceSaveDeterminer.prototype.readSRAM = function (address) {
