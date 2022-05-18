@@ -11,9 +11,9 @@
 var keyZones = [
     //Use this to control the key mapping:
                 //A:
-                [88],
+                [88,32,191],
                 //B:
-                [90],
+                [90,190],
                 //Select:
                 [16],
                 //Start:
